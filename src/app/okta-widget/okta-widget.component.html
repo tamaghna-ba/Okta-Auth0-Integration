@@ -1,0 +1,9 @@
+<div *ngIf="user; else loggedOut">
+  <p>Welcome, {{ user.name }}</p>
+  <p>Email: {{ user.email }}</p>
+</div>
+<ng-template #loggedOut>
+  <p>You are not logged in. Please log in to see your profile.</p>
+</ng-template>
+
+<app-login-button></app-login-button>
